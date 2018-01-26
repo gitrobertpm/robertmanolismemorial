@@ -62,7 +62,7 @@
 	cntrlWrap.style.display = "block";
 	
 	
-	//audio.controls = false;
+	audio.controls = false;
 	
 	function fadeIn(element, time) {
 		element.style.display = "block";
