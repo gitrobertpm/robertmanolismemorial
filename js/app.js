@@ -116,6 +116,7 @@
 			
 			setTimeout(fadeOut, 8000, imgWrap, 17);
 			setTimeout(changeImg, 10000, imgs[1]);
+			setTimeout(function() {img.style.width = "75%";}, 10000);
 			setTimeout(fadeIn, 11000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 15000, imgWrap, 17);
@@ -128,6 +129,7 @@
 			
 			setTimeout(fadeOut, 29000, imgWrap, 17);
 			setTimeout(changeImg, 31000, imgs[4]);
+			setTimeout(function() {img.style.width = "100%";}, 31000);
 			setTimeout(fadeIn, 32000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 36000, imgWrap, 17);
@@ -224,10 +226,12 @@
 			
 			setTimeout(fadeOut, 197000, imgWrap, 17);
 			setTimeout(changeImg, 199000, imgs[1]);
+			setTimeout(function() {img.style.width = "75%";}, 199000);
 			setTimeout(fadeIn, 200000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 204000, imgWrap, 17);
 			setTimeout(changeImg, 206000, imgs[0]);
+			setTimeout(function() {img.style.width = "100%";}, 206000);
 			setTimeout(fadeIn, 207000, imgWrap, 17);
 			
 		}

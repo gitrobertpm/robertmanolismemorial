@@ -5,9 +5,7 @@
 	margin: 25px auto;
 	
 	img {
-		max-width: 100%;
-		width: auto;
-		min-width: 75%;
+		width: 100%;
 		
 		border-radius: 3px;
 		@include tablet {
