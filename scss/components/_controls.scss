@@ -5,6 +5,7 @@
 	button {
 		background: none;
 		border: none;
+		outline: none;
 	}
 }
 
@@ -17,8 +18,11 @@
 .startTheShow {
 	filter: drop-shadow(10px 10px 10px rgba(10,10,10,0.7));
 	transition: all 0.4s;
+	background-image: url("../imgs/play.png");
 	&:hover {
 		filter: drop-shadow(20px 20px 10px rgba(10,10,10,0.7));
 	}
 }
+
+
 

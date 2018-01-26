@@ -1,6 +1,8 @@
 (function () { 
 	"use strict";
 	
+	const headerWrap = document.getElementsByClassName("headerWrap")[0];
+	const subHeading = document.getElementsByClassName("subHeading")[0];
 	const cntrlWrap = document.getElementsByTagName("button")[0].parentElement;
 	const playBtn = document.getElementsByClassName("startTheShow")[0];
 	const pauseBtn = document.getElementsByClassName("stopTheShow")[0];
@@ -100,7 +102,11 @@
 	
 	cntrlWrap.addEventListener("click", (e) => {
 		
-		if (e.target.classList[0] === "startTheShow") {
+		if (e.target.classList[0] === "startTheShow" || e.target.classList[0] === "startTheShowImg") {
+			console.log("test");
+			
+			fadeOut(subHeading, 17);
+			fadeOut(playBtn, 17);
 			fadeOut(textWrap, 17);
 			fadeOut(playBtn, 17);
 			audio.volume = 1;
@@ -285,6 +291,7 @@
 		if (now > 246) {
 			audio.pause();
 			fadeOut(imgWrap, 17);
+			setTimeout(fadeIn, 3000, subHeading, 17);
 			setTimeout(fadeIn, 3000, textWrap, 17);
 			setTimeout(fadeIn, 3000, playBtn, 17);
 		}
