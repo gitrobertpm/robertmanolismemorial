@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37 47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+      .cls-2 {
+        fill: #29a6d5;
+      }
+      .cls-3 {
+        mix-blend-mode: screen;
+      }
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="72.51" y1="31.87" x2="72.51" y2="-0.13" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e3f4fc"/>
+      <stop offset="1" stop-color="#7bc1ea"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="72.51" y1="-1.47" x2="72.51" y2="21.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffbd4"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <symbol id="Button_4_-_Blue" data-name="Button 4 - Blue" viewBox="0 0 145.01 33">
+      <g>
+        <path class="cls-1" d="M16.5,32.5a16,16,0,0,1,0-32h112a16,16,0,0,1,0,32Z"/>
+        <path class="cls-2" d="M128.51,1a15.5,15.5,0,0,1,0,31H16.5a15.5,15.5,0,0,1,0-31h112m0-1H16.5a16.5,16.5,0,0,0,0,33h112a16.5,16.5,0,0,0,0-33Z"/>
+      </g>
+      <g class="cls-3">
+        <path class="cls-4" d="M138.09,10.44c0,4.33-4.5,7.87-10,7.87H16.92c-5.5,0-10-3.54-10-7.87s4.5-7.86,10-7.86H128.09C133.59,2.58,138.09,6.12,138.09,10.44Z"/>
+      </g>
+    </symbol>
+  </defs>
+  <title>Asset 6</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <use width="145.01" height="33" transform="matrix(0, 0.32, -0.45, 0, 15, 0)" xlink:href="#Button_4_-_Blue"/>
+        <use width="145.01" height="33" transform="matrix(0, 0.32, -0.45, 0, 37, 0)" xlink:href="#Button_4_-_Blue"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background: radial-gradient(ellipse at center, rgba(61,56,59,0.97) 0%,rgba(61,56,59,0.97) 1%,rgba(15,0,0,0.96) 70%,rgba(0,0,0,0.96) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f73d383b', endColorstr='#f5000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}

@@ -1,0 +1,107 @@
+///***********Mixins************
+// - Text
+// - Media Queries
+// - Flexbox
+//******************************/
+
+// Text
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+
+
+// Media Queries
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+
+// Cool Borders
+@mixin coolBorder ($px, $mainColor, $shadowColor, $brdrPx: $px) {
+	border: $brdrPx solid $mainColor;
+	box-shadow: 
+	#{$px} 0px 5px $shadowColor, 
+	0px #{$px} 5px $shadowColor,
+	-#{$px} 0px 5px $shadowColor,
+	0px -#{$px} 5px $shadowColor,
+	inset #{$px} 0px 5px $shadowColor,
+	inset 0px #{$px} 5px $shadowColor,
+	inset -#{$px} 0px 5px $shadowColor,
+	inset 0px -#{$px} 5px $shadowColor;
+}
+
+
+// Cool Headings
+@mixin coolHeading($px, $mainColor, $shadowColor) {
+	color: $mainColor;
+	text-shadow: 
+	#{$px} 0px 5px $shadowColor,
+	0px #{$px} 5px $shadowColor,
+	-#{$px} 0px 5px $shadowColor,
+	0px -#{$px} 5px $shadowColor;
+};
+
+
+// shadow
+@mixin customBoxShadow ($topLeftColor: transparent, $bottomRightColor: transparent, $topLeftInsetColor: transparent, $bottomRightInsetColor: transparent, $px: 0px, $pxInset: $px) {
+	box-shadow: 
+		#{$px} 0px 5px $bottomRightColor, 
+		0px #{$px} 5px $bottomRightColor,
+		-#{$px} 0px 5px $topLeftColor,
+		0px -#{$px} 5px $topLeftColor,
+		inset #{$pxInset} 0px 5px $topLeftInsetColor,
+		inset 0px #{$pxInset} 5px $topLeftInsetColor,
+		inset -#{$pxInset} 0px 5px $bottomRightInsetColor,
+		inset 0px -#{$pxInset} 5px $bottomRightInsetColor;
+}
+
+
+// Flexbox
+@mixin flexed($flex, $wrap, $justify) {
+	display: $flex;
+	flex-flow: $wrap;
+	justify-content: $justify;
+}
+
+
+// Absolute mixin
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0, $ml: auto) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	margin-left: $ml;
+}
+
+// Transitions
+@mixin transition($dur, $bezier: ease-out) {
+	-webkit-transition: all #{$dur} #{$bezier};
+	-o-transition: all #{$dur} $bezier;
+	transition: all #{$dur} $bezier;
+}
+
+
+//Element and BEM Selectors
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

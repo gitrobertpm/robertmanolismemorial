@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Nunito');
+
+/*font-family: 'Baloo Bhaijaan', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+.heading {
+  font-family: $headings;
+	color: rgba(250,250,250,0.9);
+	text-shadow: 2px 2px 2px rgba(0,0,128,0.9);
+}
+
+h1 {
+	font-size: 2.75em;
+	margin: 25px auto 10px;
+	@include tablet {
+		font-size: 5em;
+	}
+	@include desktop {
+		font-size: 7.5em;
+	}
+}
+
+h3 {
+	font-style: italic;
+	font-size: 1.5em;
+	margin: 10px auto 15px;
+	letter-spacing: 2px;
+	@include tablet {
+		font-size: 3.5em;
+	}
+}
+
+p, h3 {
+  font-family: $plainText;
+	color: rgba(250,250,250,0.9);
+}
+
+.subHeading {
+	font-size: 0.8em;
+	margin: 3px auto;
+	@include tablet {
+		font-size: 1.5em;
+		margin-bottom: 50px;
+	}
+}
+
+.textWrap {
+	margin: 10px auto;
+	z-index: 9;
+	
+	p {
+		font-size: 1.4em;
+		margin: 10px auto;
+		text-shadow: 1px 1px 1px rgba(0,0,128,0.9);
+		
+		@include tablet {
+			font-size: 2.5em;
+		}
+		
+		@include desktop {
+			font-size: 4em;
+		}
+	}
+}
+	
+a, .btn, .btn span {
+  font-family: $headings;
+	color: rgba(250,250,250,0.9);
+}

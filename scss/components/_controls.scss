@@ -1,0 +1,24 @@
+.controlWrap {
+	display: none;
+	margin: 15px auto;
+	border: 1px solid transparent;
+	button {
+		background: none;
+		border: none;
+	}
+}
+
+.cntrlBtn {
+	width: 75px;
+	height: 75px;
+	margin: 20px auto;
+}
+
+.startTheShow {
+	filter: drop-shadow(10px 10px 10px rgba(10,10,10,0.7));
+	transition: all 0.4s;
+	&:hover {
+		filter: drop-shadow(20px 20px 10px rgba(10,10,10,0.7));
+	}
+}
+
