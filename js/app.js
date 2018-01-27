@@ -46,11 +46,16 @@
 		"imgs/brothers.jpg",
 		"imgs/dbr.jpg",
 		
-		"imgs/dbr2.jpg",
-		"imgs/fam.jpg",
-		"imgs/fam2.jpg"
+		"imgs/new_holiday/dbr2.jpg",
+		"imgs/new_holiday/dad_and_the_girls-1.jpg",
+		"imgs/new_holiday/dad_and_the_girls-2.jpg",
+		"imgs/new_holiday/dad_and_the_girls-3.jpg",
+		"imgs/new_holiday/manolis_boys-1.jpg",
 		
-		// length - 28
+		"imgs/new_holiday/manolis_boys-2.jpg",
+		"imgs/new_holiday/manolis_boys-3.jpg"
+		
+		// length - 32
 
 	];
 
@@ -105,18 +110,33 @@
 		if (e.target.classList[0] === "startTheShow" || e.target.classList[0] === "startTheShowImg") {
 			console.log("test");
 			
-			fadeOut(subHeading, 17);
-			fadeOut(playBtn, 17);
-			fadeOut(textWrap, 17);
-			fadeOut(playBtn, 17);
+			fadeOut(subHeading, 25);
+			fadeOut(playBtn, 25);
+			fadeOut(textWrap, 25);
+			
+			setTimeout(function() {
+				let blury = setInterval(addBlur, 100);
+				let blur = 0;
+				function addBlur() {
+					subHeading.style.filter = "blur(" + blur + "px)";
+					introText[0].style.filter = "blur(" + blur + "px)";
+					introText[1].style.filter = "blur(" + blur + "px)";
+					if (blur < 10) {
+							blur += 0.5;
+					} else {
+						clearInterval(blury);
+					}
+				}
+			}, 250);
+			
 			audio.volume = 1;
 			audio.currentTime = 0;
 			audio.play();
 			setTimeout(fadeIn, 3500, imgWrap, 17);
 			
 			setTimeout(fadeOut, 8000, imgWrap, 17);
-			setTimeout(changeImg, 10000, imgs[1]);
-			setTimeout(function() {img.style.width = "75%";}, 10000);
+			setTimeout(changeImg, 10100, imgs[1]);
+			setTimeout(function() {img.style.width = "75%";}, 10100);
 			setTimeout(fadeIn, 11000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 15000, imgWrap, 17);
@@ -225,14 +245,30 @@
 			setTimeout(fadeIn, 193000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 197000, imgWrap, 17);
-			setTimeout(changeImg, 199000, imgs[1]);
-			setTimeout(function() {img.style.width = "75%";}, 199000);
+			setTimeout(changeImg, 199000, imgs[28]);
 			setTimeout(fadeIn, 200000, imgWrap, 17);
 			
 			setTimeout(fadeOut, 204000, imgWrap, 17);
-			setTimeout(changeImg, 206000, imgs[0]);
-			setTimeout(function() {img.style.width = "100%";}, 206000);
+			setTimeout(changeImg, 206000, imgs[29]);
 			setTimeout(fadeIn, 207000, imgWrap, 17);
+			
+			setTimeout(fadeOut, 211000, imgWrap, 17);
+			setTimeout(changeImg, 213000, imgs[30]);
+			setTimeout(fadeIn, 214000, imgWrap, 17);
+			
+			setTimeout(fadeOut, 218000, imgWrap, 17);
+			setTimeout(changeImg, 220000, imgs[31]);
+			setTimeout(fadeIn, 221000, imgWrap, 17);
+			
+			setTimeout(fadeOut, 225000, imgWrap, 17);
+			setTimeout(changeImg, 227000, imgs[1]);
+			setTimeout(function() {img.style.width = "75%";}, 227000);
+			setTimeout(fadeIn, 228000, imgWrap, 17);
+			
+			setTimeout(fadeOut, 232000, imgWrap, 17);
+			setTimeout(changeImg, 234000, imgs[0]);
+			setTimeout(function() {img.style.width = "100%";}, 234000);
+			setTimeout(fadeIn, 235000, imgWrap, 17);
 			
 		}
 		
@@ -294,7 +330,27 @@
 		
 		if (now > 246) {
 			audio.pause();
-			fadeOut(imgWrap, 17);
+			fadeOut(imgWrap, 25);
+			
+			setTimeout(function() {
+				let blury = setInterval(addBlur, 100);
+				let blur = 10;
+				function addBlur() {
+					subHeading.style.filter = "blur(" + blur + "px)";
+					introText[0].style.filter = "blur(" + blur + "px)";
+					introText[1].style.filter = "blur(" + blur + "px)";
+					if (blur > 0) {
+							blur -= 0.5;
+					} else {
+						clearInterval(blury);
+					}
+				}
+			}, 3000);
+			
+			//subHeading.style.filter = "blur(0px)";
+			//introText[0].style.filter = "blur(0px)";
+			//introText[1].style.filter = "blur(0px)";
+			
 			setTimeout(fadeIn, 3000, subHeading, 17);
 			setTimeout(fadeIn, 3000, textWrap, 17);
 			setTimeout(fadeIn, 3000, playBtn, 17);

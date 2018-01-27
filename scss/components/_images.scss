@@ -24,11 +24,13 @@
 		max-width: 500px;
 		min-width: 240px;
 		height: 50px;
+		filter: drop-shadow(10px 10px 5px rgba(10,10,10,0.7)) hue-rotate(90eg) sepia(100%);
 	}
 	
 	.fancyBorder2 {
 		margin-left: 10px;
 		transform: rotate(180deg);
+		
 		
 		@include tablet {
 			max-width: 600;

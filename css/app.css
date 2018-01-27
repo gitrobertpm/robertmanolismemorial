@@ -425,7 +425,8 @@ h1 {
   margin: 25px auto 10px; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 5em; } }
+      font-size: 5em;
+      filter: drop-shadow(10px 10px 5px rgba(10, 10, 10, 0.7)); } }
   @media (min-width: 1024px) {
     h1 {
       font-size: 7em; } }
@@ -440,7 +441,8 @@ p {
   @media (min-width: 768px) {
     .subHeading {
       font-size: 2.5em;
-      margin-bottom: 50px; } }
+      margin-bottom: 50px;
+      filter: drop-shadow(10px 10px 5px rgba(10, 10, 10, 0.7)); } }
   @media (min-width: 1024px) {
     .subHeading {
       font-size: 3.7em; } }
@@ -451,10 +453,12 @@ p {
   .textWrap p {
     font-size: 1.4em;
     margin: 10px auto;
-    text-shadow: 1px 1px 1px rgba(0, 0, 128, 0.9); }
+    text-shadow: 1px 1px 1px rgba(0, 0, 128, 0.9);
+    transition: all .8s; }
     @media (min-width: 768px) {
       .textWrap p {
-        font-size: 2.5em; } }
+        font-size: 2.5em;
+        filter: drop-shadow(10px 10px 5px rgba(10, 10, 10, 0.7)); } }
     @media (min-width: 1024px) {
       .textWrap p {
         font-size: 4em; } }
@@ -479,7 +483,8 @@ a, .btn, .btn span {
 .textWrap .fancyBorder1, .textWrap .fancyBorder2 {
   max-width: 500px;
   min-width: 240px;
-  height: 50px; }
+  height: 50px;
+  filter: drop-shadow(10px 10px 5px rgba(10, 10, 10, 0.7)) hue-rotate(90eg) sepia(100%); }
 .textWrap .fancyBorder2 {
   margin-left: 10px;
   transform: rotate(180deg); }
@@ -591,10 +596,19 @@ a, .btn, .btn span {
   margin: 20px auto; }
 
 .startTheShow {
-  filter: drop-shadow(10px 10px 10px rgba(10, 10, 10, 0.7));
-  transition: all 0.4s;
-  background-image: url("../imgs/play.png"); }
+  transition: all 0.6s;
+  background-image: url("../imgs/play.png");
+  filter: drop-shadow(10px 10px 10px rgba(20, 20, 20, 0.7));
+  animation: lightshow 2s ease-out infinite; }
   .startTheShow:hover {
-    filter: drop-shadow(20px 20px 10px rgba(10, 10, 10, 0.7)); }
+    animation: none; }
+
+@keyframes lightshow {
+  0% {
+    filter: drop-shadow(10px 10px 10px rgba(10, 10, 10, 0.7)) hue-rotate(0deg); }
+  50% {
+    filter: drop-shadow(20px 20px 10px rgba(10, 10, 10, 0.7)) hue-rotate(180deg); }
+  100% {
+    filter: drop-shadow(10px 10px 10px rgba(10, 10, 10, 0.7)) hue-rotate(360deg); } }
 
 /*# sourceMappingURL=app.css.map */
