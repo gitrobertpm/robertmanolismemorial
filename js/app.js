@@ -59,6 +59,14 @@
 
 	];
 
+	const preload = (arr) => {
+    for (var i = 0; i < arr.length; i++) {
+			new Image().src = arr[i]; 
+    }
+	}
+
+	preload(imgs);
+
 	
 	imgWrap.style.display = "none";
 	imgWrap.style.opacity = 0;
